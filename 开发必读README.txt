@@ -1,18 +1,24 @@
-//架构:Angular5+Ionic3+Cordova+TypeScript+SASS
-//npm是nodeJS指令,请先安装nodeJs
-//因为涉及到android开发和IOS开发,window电脑用户请先安装android好JAVA JDK及Android SDK
-//window用户添加Path环境变量,参考如下:
+//本demo跑起来,你需要克服以下问题:
+--软件开发工具包(JDK,SDK,NodeJs)
+--环境变量配置(Path))
+--开发工具
+--插件安装
+--项目拉取,本地构建
 
-//本地计算机的adb目录C:\Users\Entroyi\AppData\Local\Android\Sdk\platform-tools\platform-tools
-//本地计算机java bin目录:C:\Program Files\Java\jdk1.8.0_172\bin
+//软件开发工具包(JDK,SDK,NodeJs)
+--npm是nodeJS指令,请先安装nodeJs
+--因为涉及到Android 平台和IOS 平台,window电脑用户请先安装JAVA JDK及Android SDK,IOS放以后来
 
-//  ANDROID_HOME=C:\Users\Entroyi\AppData\Local\Android\Sdk\platform-tools()
-//  JAVA_HOME=C:\Program Files\Java\jdk1.8.0_172
+//环境变量配置(Path))
+--window用户添加Path环境变量,参考如下:
+--本人本地计算机的adb目录C:\Users\Entroyi\AppData\Local\Android\Sdk\platform-tools\platform-tools
+--本人本地计算机java bin目录:C:\Program Files\Java\jdk1.8.0_172\bin
+--环境变量中  ANDROID_HOME=C:\Users\Entroyi\AppData\Local\Android\Sdk\platform-tools()
+--环境变量中  JAVA_HOME=C:\Program Files\Java\jdk1.8.0_172
+--环境变量中  Path中添加上面俩个HOME==> %JAVA_HOME%\bin;%ANDROID_HOME%\platform-tools;(尽量靠前面位置放)
+--cmd窗口指令验证  java -version ; adb  (分开验证)
 
-// Path中添加上面俩个HOME==> %JAVA_HOME%\bin;%ANDROID_HOME%\platform-tools;(尽量换在前面)
-//验证cmd指令  java -version ; adb  (分开验证)
-
-
+//插件安装
 //安装ionic 和 cordova
 npm install -g ionic cordova
 
@@ -29,7 +35,7 @@ ionic start yourAPPName type
 //启动服务,浏览器跑起来查看
 ionic serve
 
-//代码构建,基本是做了删除之类想重建下
+//代码构建,基本是做了删除之类想重建下或者拉取别人demo本地构建
 ionic build
 
 //添加android平台
