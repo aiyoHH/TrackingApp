@@ -1,0 +1,41 @@
+<!--
+  Generated template for the LoginPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>登录</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <form (submit)="doSignup()">
+    <ion-list>
+
+        <ion-item>
+          <ion-label floating>企业账户</ion-label>
+          <ion-input type="text" [(ngModel)]="account.companyAcc" name="companyAcc"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label floating>个人账户</ion-label>
+            <ion-input type="text" [(ngModel)]="account.privateAcc" name="privateAcc"></ion-input>
+          </ion-item>
+      
+        <ion-item>
+          <ion-label floating>通行密码</ion-label>
+          <ion-input type="password" [(ngModel)]="account.password" name="password"></ion-input>
+        </ion-item>
+
+        <div padding>
+            <button ion-button color="primary" block>登 录</button>
+          </div>
+      
+      </ion-list>
+    </form>
+</ion-content>

@@ -1,0 +1,69 @@
+<!--
+  Generated template for the PlotsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>种植计划</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content no-padding>
+
+
+  <ion-card style="margin: 0px; width: 100%">
+
+    <img src="assets/imgs/99c.png" />
+
+    <ion-row>
+      <ion-col style="text-align: center">
+        <p>种植公司:</p>
+        <p>种植基地:</p>
+        <p>种植编号:</p>
+        <p>种植品类:</p>
+        <p>种植年度:</p>
+        <p>种植面积:</p>
+        <p>负责人:</p>
+      </ion-col>
+      <ion-col col-9>
+        <p>{{items.base.company}}</p>
+        <p>{{items.base.baseName}}</p>
+        <p>{{items.base.serial}}</p>
+        <p>{{items.base.category}}</p>
+        <p>{{items.base.year}}</p>
+        <p>{{items.base.area}}</p>
+        <p>{{items.base.principal}}</p>
+      </ion-col>
+    </ion-row>
+  </ion-card>
+
+  <ion-grid>
+    <ion-row *ngFor="let rowList of getRowListByGridList(2)">
+      <ion-col no-padding *ngFor="let plotInfo of rowList" (click)="jumpPage()">
+        <ion-card>
+          <img src="{{plotInfo.img}}">
+          <div style="padding: 8px ">
+              <ion-col col-9>
+                  <span>{{plotInfo.plot}}</span>
+              </ion-col>
+              <ion-col col-3 style="text-align: end">
+                  <span>{{plotInfo.area}}</span>
+              </ion-col>
+          </div>
+        </ion-card>
+      </ion-col>
+
+    </ion-row>
+  </ion-grid>
+
+
+
+
+
+
+</ion-content>

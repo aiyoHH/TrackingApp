@@ -1,0 +1,68 @@
+<!--
+  Generated template for the OperationPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>新寨山口塘</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content no-padding>
+
+  <ion-row style="background-color: #f2f2f2">
+    <ion-col col-6>
+      <img src="{{opeInfo.plot.img}}" />
+    </ion-col>
+    <ion-col col-3>
+      <p>地块编号</p>
+      <p>地块面积</p>
+      <p>土壤类型</p>
+      <p>土壤PH</p>
+      <p>负责人</p>
+
+    </ion-col>
+    <ion-col col-3>
+      <p>{{opeInfo.plot.ser}}</p>
+      <p>{{opeInfo.plot.area}}</p>
+      <p>{{opeInfo.plot.soil}}</p>
+      <p>{{opeInfo.plot.ph}}</p>
+      <p>{{opeInfo.plot.principal}}</p>
+    </ion-col>
+    <button ion-button block (click)="jumpPage()">添加田间作业</button>
+  </ion-row>
+
+
+  <ion-list style="background-color: #f2f2f2; margin-top: 10px;" padding>
+
+    <ion-title style="text-align: center">作业记录</ion-title>
+
+    <ion-row *ngFor="let item of opeInfo.work">
+      <ion-col col-4 style="text-align: center">
+        <p>田间作业编号</p>
+        <p>田间作业类型</p>
+        <p>开始日期</p>
+        <p>主要物料</p>
+        <p>作业方式</p>
+        <p>作业效果</p>
+        <p>负责人</p>
+      </ion-col>
+      <ion-col col-8>
+        <p>{{item.id}}</p>
+        <p>{{item.type}}</p>
+        <p>{{item.date}}</p>
+        <p>{{item.material}}</p>
+        <p>{{item.opetype}}</p>
+        <p>{{item.result}}</p>
+        <p>{{item.principal}}</p>
+      </ion-col>
+    </ion-row>
+  </ion-list>
+
+
+</ion-content>

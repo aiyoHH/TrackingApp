@@ -1,0 +1,112 @@
+<!--
+  Generated template for the AddOperationPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>新建田间作业</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding >
+
+  <ion-list >
+
+    <ion-item>
+      <ion-label item-start>地块名称</ion-label>
+      <ion-input type="text" value='新寨山口塘'></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label item-start>田间作业类型</ion-label>
+      <ion-select >
+          <ion-option selected="true">调光</ion-option>
+          <ion-option >松土</ion-option>
+          <ion-option >除草</ion-option>
+          <ion-option >摘蕾</ion-option>
+          <ion-option >浇水</ion-option>
+          <ion-option >施肥</ion-option>
+          <ion-option >上土防寒</ion-option>
+          <ion-option >上网膜</ion-option>
+          <ion-option >病虫害防治</ion-option>
+        </ion-select>
+    </ion-item>
+
+
+    <ion-item>
+      <ion-label item-start>作业开始日期*</ion-label>
+      <ion-datetime displayFormat="DD-MM-YYYY" min="2015-01-01" max="2040-12-09" ></ion-datetime>
+    </ion-item>
+
+    <ion-item>
+      <ion-label item-start>作业结束日期</ion-label>
+      <ion-datetime displayFormat="DD-MM-YYYY" min="2015-01-01" max="2040-12-09" ></ion-datetime>
+    </ion-item>
+
+    <ion-item>
+      <ion-label item-start>作业方式</ion-label>
+      <ion-select >
+          <ion-option selected="true">人工</ion-option>
+          <ion-option >机械</ion-option>
+         
+        </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label item-start>作业效果</ion-label>
+      <ion-input type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label item-start>主要物料</ion-label>
+      <ion-select >
+          <ion-option selected="true">复合肥</ion-option>
+          <ion-option >手套</ion-option>
+          <ion-option >锄头</ion-option>
+          <ion-option >遮阳网</ion-option>
+          <ion-option >打地机</ion-option>
+          <ion-option >浇水器</ion-option>
+          <ion-option >化肥</ion-option>
+          <ion-option >竹子</ion-option>
+         
+        </ion-select>
+    </ion-item>
+     
+    <ion-item>
+        <ion-label item-start>照片地址</ion-label>
+       
+        <ion-input type="text" value="{{imgpath}}"></ion-input>
+      </ion-item>
+
+    
+    <ion-item>
+      <ion-label item-start>负责人*</ion-label>
+      <ion-input type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label item-start>备注</ion-label>
+      <ion-input type="text"></ion-input>
+    </ion-item>
+
+    <div class="card-background-page">
+ 
+        <ion-card>
+            <ion-img width="300" height="200" src="{{imgpath}}"></ion-img>
+            <!-- <img ng-src="{{imgpath}}" style="width: 300px;height:200px;"/> -->
+          
+            <button class="card-title" ion-button icon-only (click)="getPicture()">
+                <ion-icon name="add-circle"></ion-icon>
+              </button>
+        </ion-card>
+     </div>
+
+     <button ion-button full round  (click)="popComplete()">提 交</button>
+
+    <ion-item></ion-item>
+
+  </ion-list>
+
+</ion-content>

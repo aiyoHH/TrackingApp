@@ -14,3 +14,21 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+app-app{
+    ion-avatar img {
+      display: block;
+      border-radius: 50%;
+      width: auto;
+      height: 100px;
+      margin: 0 auto 0;
+      box-shadow: 0px 11px 20px -3px rgba(142, 136, 146, 0.75);
+    }
+
+     ion-item-group span{
+        margin-left: 5px;
+    
+    }
+    ion-footer span{
+        margin-left: 5px;
+    }
+  }

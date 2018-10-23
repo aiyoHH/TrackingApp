@@ -3,16 +3,46 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Home</ion-title>
+    <ion-title>溯源4.0</ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  <h3>Ionic Menu Starter</h3>
 
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.
-  </p>
+<ion-content class="cards-bg">
 
-  <button ion-button secondary menuToggle>Toggle Menu</button>
+  <ion-list>
+    <ion-card *ngFor="let item of list" (click)="jumpPage()">
+      <img src="{{item.baseImg}}" />
+      <ion-card-content>
+        <ion-card-title>
+          {{item.serial}}   {{item.category}}
+        </ion-card-title>
+        <p> {{item.baseName}}</p>
+      </ion-card-content>
+
+      <ion-row no-padding>
+        <ion-col>
+          <button ion-button clear small color="danger" icon-start>
+            <ion-icon name='person'></ion-icon>
+            {{item.principal}}
+          </button>
+        </ion-col>
+        <ion-col text-center>
+          <button ion-button clear small color="danger" icon-start>
+            <ion-icon name='apps'></ion-icon>
+            {{item.area}}
+          </button>
+        </ion-col>
+        <ion-col text-right>
+          <button ion-button clear small color="danger" icon-start>
+            <ion-icon name='locate'></ion-icon>
+            {{item.status}}
+          </button>
+        </ion-col>
+      </ion-row>
+
+    </ion-card>
+
+  </ion-list>
+
 </ion-content>
