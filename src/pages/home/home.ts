@@ -1,7 +1,6 @@
 import { Component,OnInit } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController,MenuController } from 'ionic-angular';
 import { PlotsPage } from "../plots/plots";
-import { LoginPage } from "../login/login";
 import { BaseBean } from "../../app/bean/baseBean";
 import { ApiProvider } from '../../providers/api/api';
 
@@ -15,14 +14,12 @@ export class HomePage implements OnInit{
   public list:BaseBean[];
 
 
-  constructor(public navCtrl: NavController,public apiProvider:ApiProvider) {
+  constructor(public navCtrl: NavController,public menu:MenuController,public apiProvider:ApiProvider) {
 
   }
 
   //与ionicLifeCycle的ionViewDidLoad一致
   ngOnInit() {
-   this.navCtrl.push(LoginPage);
-   
    this.getData();
   }
 
@@ -45,9 +42,11 @@ export class HomePage implements OnInit{
   
   ionViewDidEnter(){
     console.log("Looks like I'm about to ionViewDidEnter :( 它的触发和ionViewDidLoad的区别在于，不管是第一次加载还是缓存加载它都会触发");
+    
   }
   ionViewWillLeave(){
     console.log("Looks like I'm about to ionViewWillLeave :( 当前页面即将离场时触发");
+    
   }
 
   ionViewDidLeave(){

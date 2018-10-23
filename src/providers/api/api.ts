@@ -46,9 +46,6 @@ export class ApiProvider {
    }
 
 
-
-
-
 /**
  * Handle Http operation that failed.
  * Let the app continue.

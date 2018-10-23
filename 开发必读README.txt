@@ -25,7 +25,7 @@ npm install -g ionic cordova
 //项目初始化 
 ionic start yourAPPName type
 
-//type有一下几种
+//type有以下可选:
 ---tabs : a simple 3 tab layout
 ---sidemenu: a layout with a swipable menu on the side
 ---blank: a bare starter with a single page
