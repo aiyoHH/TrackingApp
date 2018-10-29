@@ -1,0 +1,13 @@
+page-operation {
+  $bg-color:#f2f2f2;
+ 
+  ion-content >ion-row{
+    background-color: $bg-color;
+  }
+
+  ion-list{
+    margin-top: 10px;
+    background-color: #fff; 
+  }
+ 
+}

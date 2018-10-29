@@ -1,14 +1,10 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams,MenuController, ToastController } from 'ionic-angular';
-import { HomePage } from "../home/home";
-
-
-/**
- * Generated class for the LoginPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import { IonicPage, NavController, MenuController } from 'ionic-angular';
+import { PlaHomePage } from "../plantation/home/home";
+import { CirHomePage } from "../circulation/cirhome/cirhome";
+import { ProHomePage } from "../producation/prohome/prohome";
+import { ApiProvider } from '../../providers/api/api';
+import { ToastProvider } from '../../providers/toast/toast';
 
 @IonicPage()
 @Component({
@@ -17,37 +13,45 @@ import { HomePage } from "../home/home";
 })
 export class LoginPage {
 
-  account: { companyAcc: string,privateAcc: string, password: string } = {
+  account: { companyAcc: string, privateAcc: string, password: string } = {
     companyAcc: '',
-    privateAcc:'ADMIN',
+    privateAcc: 'ADMIN',
     password: 'km123456'
   };
 
-  constructor(public navCtrl: NavController, public navParams: NavParams,public menu:MenuController,public toastCtrl:ToastController) {
+  constructor(public navCtrl: NavController, public menu: MenuController, public apiProvider: ApiProvider, public toastProvider: ToastProvider) {
   }
 
 
   doSignup() {
-    let obj=this.account.companyAcc;
-    if(typeof obj == "undefined" || obj == null || obj == ""){
-      let toast = this.toastCtrl.create({
-        message: "企业账户不能为空",
-        duration: 1200,
-        position: 'top'
-      });
-      toast.present();
-    }else{
-      //重新设置rootPage
-      this.navCtrl.setRoot(HomePage);
+    let obj = this.account.companyAcc;
+    if (typeof obj == "undefined" || obj == null || obj == "") {
+      this.toastProvider.create("企业账户不能为空").present();
+      return;
+    }
+    //重新设置rootPage
+    //种植公司Plantation  生产公司Producation  流通公司Circulation
+    switch (obj) {
+      case '1234':
+        this.navCtrl.setRoot(CirHomePage);
+        break;
+
+      case 'abcd':
+        this.navCtrl.setRoot(ProHomePage);
+        break;
+
+      default:
+        this.navCtrl.setRoot(PlaHomePage);
+        break;
     }
   }
 
-  ionViewWillEnter(){
+  ionViewWillEnter() {
     //左滑菜单关闭
     this.menu.enable(false);
   }
 
-  ionViewWillLeave(){
+  ionViewWillLeave() {
     //左滑菜单打开
     this.menu.enable(true);
   }

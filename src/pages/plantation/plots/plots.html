@@ -1,9 +1,3 @@
-<!--
-  Generated template for the PlotsPage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
 <ion-header>
 
   <ion-navbar>
@@ -12,16 +6,11 @@
 
 </ion-header>
 
-
 <ion-content no-padding>
-
-
-  <ion-card style="margin: 0px; width: 100%">
-
+  <ion-card class="full-card">
     <img src="assets/imgs/99c.png" />
-
     <ion-row>
-      <ion-col style="text-align: center">
+      <ion-col text-center>
         <p>种植公司:</p>
         <p>种植基地:</p>
         <p>种植编号:</p>
@@ -47,23 +36,16 @@
       <ion-col no-padding *ngFor="let plotInfo of rowList" (click)="jumpPage()">
         <ion-card>
           <img src="{{plotInfo.img}}">
-          <div style="padding: 8px ">
+          <div class="grid-content">
               <ion-col col-9>
                   <span>{{plotInfo.plot}}</span>
               </ion-col>
-              <ion-col col-3 style="text-align: end">
+              <ion-col col-3 text-center>
                   <span>{{plotInfo.area}}</span>
               </ion-col>
           </div>
         </ion-card>
       </ion-col>
-
     </ion-row>
   </ion-grid>
-
-
-
-
-
-
 </ion-content>

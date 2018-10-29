@@ -1,15 +1,9 @@
 import { Component,OnInit } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { AddOperationPage } from "../add-operation/add-operation";
-import { OpeBean } from "../../app/bean/opeBean";
-import { ApiProvider } from '../../providers/api/api';
+import { OpeBean } from "../../../app/bean/opeBean";
+import { ApiProvider } from '../../../providers/api/api';
 
-/**
- * Generated class for the OperationPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
 
 @IonicPage()
 @Component({

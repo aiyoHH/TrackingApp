@@ -4,25 +4,32 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { ImagePicker } from "@ionic-native/image-picker";
 import { HttpClientModule } from "@angular/common/http";
 import { MyApp } from './app.component';
-import { HomePage } from '../pages/home/home';
-import { PlotsPage } from '../pages/plots/plots';
-import { OperationPage } from '../pages/operation/operation';
-import { AddOperationPage } from "../pages/add-operation/add-operation";
+import { PlaHomePage } from '../pages/plantation/home/home';
+import { PlotsPage } from '../pages/plantation/plots/plots';
+import { OperationPage } from '../pages/plantation/operation/operation';
+import { AddOperationPage } from "../pages/plantation/add-operation/add-operation";
 import { LoginPage } from '../pages/login/login';
+
+import { CirHomePage } from "../pages/circulation/cirhome/cirhome";
+import { ProHomePage } from "../pages/producation/prohome/prohome";
 
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { ApiProvider } from '../providers/api/api';
+import { ToastProvider } from '../providers/toast/toast';
 
 @NgModule({
   declarations: [
     MyApp,
-    HomePage,
+    PlaHomePage,
     PlotsPage,
     OperationPage,
     AddOperationPage,
+    CirHomePage,
+    ProHomePage,
     LoginPage
+  
   ],
   imports: [
     BrowserModule,
@@ -32,10 +39,12 @@ import { ApiProvider } from '../providers/api/api';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage,
+    PlaHomePage,
     PlotsPage,
     OperationPage,
     AddOperationPage,
+    CirHomePage,
+    ProHomePage,
     LoginPage
   ],
   providers: [
@@ -43,7 +52,9 @@ import { ApiProvider } from '../providers/api/api';
     SplashScreen,
     ImagePicker,
     ApiProvider,
+    ToastProvider,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
+   
     
   ]
 })

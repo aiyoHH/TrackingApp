@@ -24,6 +24,20 @@ export const AccountExample: { companyAcc: string, privateAcc: string, password:
     password: 'km123456'
 };
 
+
+export const UserInfo:any={
+        name: '温大浩',
+        job: '负责人/农户',
+        company :'德庆县德鑫农业发展有限公司',
+        profileImage: 'assets/imgs/girl1.jpg',
+        id: '13',
+        tel: '136103293847',
+        status: '启用',
+        gender:'男',
+        identity_id:'350429********0342',
+        remark:'2017年度优秀员工'
+}
+
 //种植计划页 地块信息 数据模板
 export const PlotList:PlotBean[]=[
     { area: '1500亩', serial: 'DK032', img: '../assets/imgs/cropland2.png', plot: '地咀山北面' },
