@@ -12,12 +12,14 @@ import { LoginPage } from '../pages/login/login';
 
 import { CirHomePage } from "../pages/circulation/cirhome/cirhome";
 import { ProHomePage } from "../pages/producation/prohome/prohome";
-
+import { ApiProvider } from '../providers/api/api';
+import { ToastProvider } from '../providers/toast/toast';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-import { ApiProvider } from '../providers/api/api';
-import { ToastProvider } from '../providers/toast/toast';
+import { Camera } from "@ionic-native/camera";
+import { Base64 } from "@ionic-native/base64";
+
 
 @NgModule({
   declarations: [
@@ -53,6 +55,8 @@ import { ToastProvider } from '../providers/toast/toast';
     ImagePicker,
     ApiProvider,
     ToastProvider,
+    Camera,
+    Base64,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
    
     

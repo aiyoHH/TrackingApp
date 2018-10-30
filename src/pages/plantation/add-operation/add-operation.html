@@ -70,17 +70,10 @@
           <ion-option >打地机</ion-option>
           <ion-option >浇水器</ion-option>
           <ion-option >化肥</ion-option>
-          <ion-option >竹子</ion-option>
-         
+          <ion-option >竹子</ion-option>   
         </ion-select>
     </ion-item>
      
-    <ion-item>
-        <ion-label item-start>照片地址</ion-label>
-       
-        <ion-input type="text" value="{{imgpath}}"></ion-input>
-      </ion-item>
-
     
     <ion-item>
       <ion-label item-start>负责人*</ion-label>
@@ -91,15 +84,14 @@
       <ion-input type="text"></ion-input>
     </ion-item>
 
-    <div class="card-background-page">
- 
+    <div class="card-background-page" >
         <ion-card>
-            <ion-img width="300" height="200" src="{{imgpath}}"></ion-img>
+            <ion-img width="270" height="340" src="{{base64Image}}" ></ion-img>
             
           
-            <button class="card-title" ion-button icon-only (click)="getPicture()">
-                <ion-icon name="add-circle"></ion-icon>
-              </button>
+            <button class="card-title" color="light" ion-fab mini (click)="presentActionSheet()">
+                <ion-icon name="add"></ion-icon>
+            </button>
         </ion-card>
      </div>
 

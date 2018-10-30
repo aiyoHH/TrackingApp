@@ -11,9 +11,10 @@
 <ion-content class="cards-bg">
 
   <ion-list>
-    <ion-card *ngFor="let item of list" (click)="jumpPage()">
-      <img src="{{item.baseImg}}" />
+    <!-- <ion-card *ngFor="let item of list" (click)="jumpPage()">
+        <img src="{{item.baseImg}}" />
       <ion-card-content>
+          
         <ion-card-title>
           {{item.serial}}   {{item.category}}
         </ion-card-title>
@@ -41,8 +42,52 @@
         </ion-col>
       </ion-row>
 
-    </ion-card>
+    </ion-card> -->
 
+    <ion-card *ngFor="let item of list" (click)="jumpPage()">
+      <ion-row>
+        <ion-col>
+          <ion-card-title>
+            {{item.serial}} {{item.category}}
+          </ion-card-title>
+          <p> {{item.baseName}}</p>
+        </ion-col>
+
+        <ion-col>
+          <img src="{{item.baseImg}}" />
+        </ion-col>
+      </ion-row>
+
+      <ion-row no-padding>
+        <ion-col>
+          <button ion-button clear small color="danger" icon-start>
+            <ion-icon name='person'></ion-icon>
+            {{item.principal}}
+          </button>
+        </ion-col>
+        <ion-col text-center>
+          <button ion-button clear small color="danger" icon-start>
+            <ion-icon name='apps'></ion-icon>
+            {{item.area}}
+          </button>
+        </ion-col>
+        <ion-col text-right>
+          <button ion-button clear small color="danger" icon-start>
+            <ion-icon name='locate'></ion-icon>
+            {{item.status}}
+          </button>
+        </ion-col>
+      </ion-row>
+    </ion-card>
   </ion-list>
 
+  <ion-fab right bottom>
+      <button ion-fab color="light" ><ion-icon color="dark" name="add"></ion-icon></button>
+      <ion-fab-list side="top">
+        <button ion-fab><ion-icon name="logo-facebook"></ion-icon></button>
+        <button ion-fab><ion-icon name="logo-twitter"></ion-icon></button>
+        <button ion-fab><ion-icon name="logo-vimeo"></ion-icon></button>
+        <button ion-fab><ion-icon name="logo-googleplus"></ion-icon></button>
+      </ion-fab-list>
+    </ion-fab>
 </ion-content>

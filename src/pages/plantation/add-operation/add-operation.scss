@@ -1,15 +1,29 @@
 page-add-operation {
+
+
+  ion-select{
+    max-width: 70%;
+  }
+
+
   .card-background-page {
 
     ion-card {
       position: relative;
       text-align: center;
+       background-color: #262626;
+       height: 340px;
+
+       ion-img{
+            background-color: transparent;
+       }
+    
     }
   
     .card-title {
       position: absolute;
-      top: 45%;
-      left: 45%;
+      top: 42%;
+      left: 42%;
      
     }
   
