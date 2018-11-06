@@ -22,6 +22,7 @@ import { Base64 } from "@ionic-native/base64";
 import { IonicStorageModule } from "@ionic/storage";
 // import { BarcodeScanner } from "@ionic-native/barcode-scanner";
 // import { QRScanner } from "@ionic-native/qr-scanner";
+import { ZBar } from "@ionic-native/zbar";
 
 
 @NgModule({
@@ -61,6 +62,7 @@ import { IonicStorageModule } from "@ionic/storage";
     ToastProvider,
     Camera,
     Base64,
+    ZBar,
     // BarcodeScanner,
     // QRScanner,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
