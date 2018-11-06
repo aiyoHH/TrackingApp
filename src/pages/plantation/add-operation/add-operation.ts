@@ -50,7 +50,7 @@ export class AddOperationPage {
           //里面已经添加了'data:image/jpeg;base64,'
           this.base64Image = base64File;
         }, (err) => {
-          console.log(+"aaa=" + err);
+          console.log("aaa=" + err);
         });
 
       }, (err) => {

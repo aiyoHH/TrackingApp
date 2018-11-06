@@ -15,4 +15,9 @@
 
 <ion-content padding>
   <ion-title>CiculationHomePage</ion-title>
+
+  <button ion-button block (click)="openScan()">业务流程处理</button>
+  <button ion-button block (click)="checkHistory()">查看操作记录</button>
+
+  <span>扫码结果：{{scanResult}}</span>  
 </ion-content>

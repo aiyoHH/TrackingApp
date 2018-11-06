@@ -85,5 +85,6 @@
     <plugin name="cordova-plugin-telerik-imagepicker" spec="2.2.2" />
     <plugin name="cordova-plugin-camera" spec="4.0.3" />
     <plugin name="com-badrit-base64" spec="0.2.0" />
+    <plugin name="cordova-sqlite-storage" spec="2.5.0" />
     <engine name="android" spec="7.1.1" />
 </widget>

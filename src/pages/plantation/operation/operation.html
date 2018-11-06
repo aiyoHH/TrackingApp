@@ -37,6 +37,14 @@
     <ion-title text-center>作业记录</ion-title>
 
     <ion-row *ngFor="let item of opeInfo.work">
+          <ion-row >
+            <ion-col col-4 text-center>
+              <p>田间作业编号</p>
+            </ion-col>
+            <ion-col col-8>
+              <p>{{item.result}}距离策划书达菲鸡是贷款福利局</p>
+            </ion-col>
+          </ion-row>
       <ion-col col-4 text-center>
         <p>田间作业编号</p>
         <p>田间作业类型</p>
@@ -52,7 +60,7 @@
         <p>{{item.date}}</p>
         <p>{{item.material}}</p>
         <p>{{item.opetype}}</p>
-        <p>{{item.result}}</p>
+        <p>{{item.result}}距离策划书达菲鸡是贷款福利局</p>
         <p>{{item.principal}}</p>
       </ion-col>
     </ion-row>

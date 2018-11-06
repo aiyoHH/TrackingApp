@@ -3,6 +3,7 @@ import { NavController,MenuController } from 'ionic-angular';
 import { PlotsPage } from "../plots/plots";
 import { BaseBean } from "../../../app/bean/baseBean";
 import { ApiProvider } from '../../../providers/api/api';
+import { Storage } from "@ionic/storage";
 
 @Component({
   selector: 'page-home',
@@ -12,8 +13,11 @@ export class PlaHomePage implements OnInit{
 
   public list:BaseBean[];
 
-  constructor(public navCtrl: NavController,public menu:MenuController,public apiProvider:ApiProvider) {
-
+  constructor(public navCtrl: NavController,public menu:MenuController,public apiProvider:ApiProvider,
+              private storage:Storage) {
+              //   storage.get("account").then((val)=>{
+              //     console.log("account="+val)
+              //  })
   }
 
   //与ionicLifeCycle的ionViewDidLoad一致

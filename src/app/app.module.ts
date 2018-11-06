@@ -19,6 +19,9 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { Camera } from "@ionic-native/camera";
 import { Base64 } from "@ionic-native/base64";
+import { IonicStorageModule } from "@ionic/storage";
+// import { BarcodeScanner } from "@ionic-native/barcode-scanner";
+// import { QRScanner } from "@ionic-native/qr-scanner";
 
 
 @NgModule({
@@ -37,6 +40,7 @@ import { Base64 } from "@ionic-native/base64";
     BrowserModule,
     HttpClientModule,
     IonicModule.forRoot(MyApp),
+    IonicStorageModule.forRoot()
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -57,6 +61,8 @@ import { Base64 } from "@ionic-native/base64";
     ToastProvider,
     Camera,
     Base64,
+    // BarcodeScanner,
+    // QRScanner,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
    
     
