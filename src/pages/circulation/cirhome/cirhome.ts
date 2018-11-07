@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 // import { BarcodeScanner } from "@ionic-native/barcode-scanner";
 import { ZBar, ZBarOptions  } from "@ionic-native/zbar";
+import { ScanHistoryPage } from "../scan-history/scan-history";
+import { ScanResultPage } from "../scan-result/scan-result";
 
 
 /**
@@ -21,8 +23,10 @@ export class CirHomePage {
   scanResult: any;
 
    options: ZBarOptions = {
-    flash: 'off',
-    drawSight: false
+    text_title:'条码扫描',
+    text_instructions:'请将相机对准条码',
+    flash: 'auto',
+    drawSight: true
   };
 
 
@@ -34,24 +38,19 @@ export class CirHomePage {
   }
 
   public openScan(): void {
-    // this.barcodeScanner.scan().then(barcodeData => {
-    //   alert( barcodeData);
-    //   this.scanResult=barcodeData.text;
-    //  }).catch(err => {
-    //   alert('Error'+err);
-    //  });
+    this.zbar.scan(this.options)
+    .then(result => {
+      this.scanResult=result; // Scanned code
+      this.navCtrl.push(ScanResultPage, { 'scanResult': result });
+    })
+    .catch(error => {
+       this.scanResult=error; // Error message
+    });
   }
 
   public checkHistory(): void {
-    // this.navCtrl.push();
-
-    this.zbar.scan(this.options)
-   .then(result => {
-     this.scanResult=result; // Scanned code
-   })
-   .catch(error => {
-      this.scanResult=error; // Error message
-   });
+    this.navCtrl.push(ScanHistoryPage);
+     
    
   }
 

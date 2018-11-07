@@ -13,11 +13,21 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  <ion-title>CiculationHomePage</ion-title>
+<ion-content class="card-background-page" padding>
 
-  <button ion-button block (click)="openScan()">业务流程处理</button>
-  <button ion-button block (click)="checkHistory()">查看操作记录</button>
 
-  <span>扫码结果：{{scanResult}}</span>  
+        <ion-card  (click)="openScan()">
+          <img src="assets/imgs/scan.png"/>
+          <div class="card-title" >业务流程处理</div>
+          <div class="card-subtitle">流通 上架</div>
+        </ion-card>
+      
+        <ion-card (click)="checkHistory()">
+          <img src="assets/imgs/history.png"/>
+          <!-- <div class="card-title">查看操作记录</div>
+          <div class="card-subtitle">64 Listings</div> -->
+        </ion-card>
+    
+
+ 
 </ion-content>

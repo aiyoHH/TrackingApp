@@ -11,6 +11,8 @@ import { AddOperationPage } from "../pages/plantation/add-operation/add-operatio
 import { LoginPage } from '../pages/login/login';
 
 import { CirHomePage } from "../pages/circulation/cirhome/cirhome";
+import { ScanHistoryPage } from "../pages/circulation/scan-history/scan-history";
+import { ScanResultPage } from "../pages/circulation/scan-result/scan-result";
 import { ProHomePage } from "../pages/producation/prohome/prohome";
 import { ApiProvider } from '../providers/api/api';
 import { ToastProvider } from '../providers/toast/toast';
@@ -25,6 +27,7 @@ import { IonicStorageModule } from "@ionic/storage";
 import { ZBar } from "@ionic-native/zbar";
 
 
+
 @NgModule({
   declarations: [
     MyApp,
@@ -33,6 +36,8 @@ import { ZBar } from "@ionic-native/zbar";
     OperationPage,
     AddOperationPage,
     CirHomePage,
+    ScanHistoryPage,
+    ScanResultPage,
     ProHomePage,
     LoginPage
   
@@ -51,6 +56,8 @@ import { ZBar } from "@ionic-native/zbar";
     OperationPage,
     AddOperationPage,
     CirHomePage,
+    ScanHistoryPage,
+    ScanResultPage,
     ProHomePage,
     LoginPage
   ],
