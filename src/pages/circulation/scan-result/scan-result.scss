@@ -1,8 +1,21 @@
 page-scan-result {
+    ion-card{
+        position: relative;
+    }
     ion-select{
         max-width: 70%;
       }
       .margin-top-20{
           margin-top: 20px;
+          margin-bottom: 20px;
+      }
+      .card-seal {
+        position: absolute;
+        top: 1%;
+        right:1%;
+    
+        width: 80px;
+        height: 80px;
+        
       }
 }

@@ -13,6 +13,7 @@ import { LoginPage } from '../pages/login/login';
 import { CirHomePage } from "../pages/circulation/cirhome/cirhome";
 import { ScanHistoryPage } from "../pages/circulation/scan-history/scan-history";
 import { ScanResultPage } from "../pages/circulation/scan-result/scan-result";
+import { ScanHistoryDetailPage } from "../pages/circulation/scan-history-detail/scan-history-detail";
 import { ProHomePage } from "../pages/producation/prohome/prohome";
 import { ApiProvider } from '../providers/api/api';
 import { ToastProvider } from '../providers/toast/toast';
@@ -38,6 +39,7 @@ import { ZBar } from "@ionic-native/zbar";
     CirHomePage,
     ScanHistoryPage,
     ScanResultPage,
+    ScanHistoryDetailPage,
     ProHomePage,
     LoginPage
   
@@ -58,6 +60,7 @@ import { ZBar } from "@ionic-native/zbar";
     CirHomePage,
     ScanHistoryPage,
     ScanResultPage,
+    ScanHistoryDetailPage,
     ProHomePage,
     LoginPage
   ],

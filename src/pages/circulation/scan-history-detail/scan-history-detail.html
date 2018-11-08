@@ -1,5 +1,5 @@
 <!--
-  Generated template for the ScanResultPage page.
+  Generated template for the ScanHistoryDetailPage page.
 
   See http://ionicframework.com/docs/components/#navigation for more info on
   Ionic pages and navigation.
@@ -7,36 +7,61 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>业务处理</ion-title>
+    <ion-title>流通记录详情</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
-  <ion-item>
-    <ion-label item-start>箱体条码</ion-label>
-    <ion-input type="text" value='{{scanResult}}'></ion-input>
-  </ion-item>
 
-  <ion-item>
-    <ion-label item-start>业务流程</ion-label>
-    <ion-select>
-      <ion-option selected="true">门店上架</ion-option>
-      <!-- <ion-option>门店入库</ion-option>
-      <ion-option>仓库出库</ion-option>
-      <ion-option>仓库入库</ion-option> -->
-    </ion-select>
-  </ion-item>
-
-  <ion-item>
-    <ion-label item-start>操作时间</ion-label>
-
-    <div item-content>2018/11/07 11:19:40</div>
-  </ion-item>
-
-  <button class="margin-top-20" ion-button full  (click)="showConfirm()">确 认 提 交</button>
-
+  <ion-card>
+    <ion-card-header>
+      溯源流通记录
+    </ion-card-header>
+    <ion-card-content>
+      <ion-row>
+        <ion-col col-4 text-center>
+          <p>流通门店</p>
+        </ion-col>
+        <ion-col col-8>
+          <p>康美大药房普宁长春路分店</p>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col col-4 text-center>
+          <p>产品入库时间</p>
+        </ion-col>
+        <ion-col col-8>
+          <p>2018-11-08</p>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col col-4 text-center>
+          <p>操作员</p>
+        </ion-col>
+        <ion-col col-8>
+          <p>卢万达</p>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col col-4 text-center>
+          <p>产品上架时间</p>
+        </ion-col>
+        <ion-col col-8>
+          <p>2018-11-10</p>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col col-4 text-center>
+          <p>操作员</p>
+        </ion-col>
+        <ion-col col-8>
+          <p>萧十一</p>
+        </ion-col>
+      </ion-row>
+    </ion-card-content>
+  </ion-card>
 
   <ion-card>
     <ion-card-header>
@@ -84,11 +109,8 @@
         </ion-col>
       </ion-row>
     </ion-card-content>
-
-    <img class="card-seal" src="assets/imgs/seal.png" >
   </ion-card>
 
-  
   <ion-card>
     <ion-card-header>
       溯源种植记录
@@ -151,7 +173,7 @@
         </ion-col>
       </ion-row>
     </ion-card-content>
-    <img class="card-seal" src="assets/imgs/seal.png" >
   </ion-card>
+
 
 </ion-content>

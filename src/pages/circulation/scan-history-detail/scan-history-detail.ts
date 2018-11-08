@@ -1,10 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { ScanHistoryDetailPage } from "../scan-history-detail/scan-history-detail";
-
 
 /**
- * Generated class for the ScanHistoryPage page.
+ * Generated class for the ScanHistoryDetailPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -12,20 +10,16 @@ import { ScanHistoryDetailPage } from "../scan-history-detail/scan-history-detai
 
 @IonicPage()
 @Component({
-  selector: 'page-scan-history',
-  templateUrl: 'scan-history.html',
+  selector: 'page-scan-history-detail',
+  templateUrl: 'scan-history-detail.html',
 })
-export class ScanHistoryPage {
+export class ScanHistoryDetailPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad ScanHistoryPage');
-  }
-
-  checkDetail(){
-    this.navCtrl.push(ScanHistoryDetailPage);
+    console.log('ionViewDidLoad ScanHistoryDetailPage');
   }
 
 }

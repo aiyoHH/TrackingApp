@@ -4,7 +4,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { ZBar, ZBarOptions  } from "@ionic-native/zbar";
 import { ScanHistoryPage } from "../scan-history/scan-history";
 import { ScanResultPage } from "../scan-result/scan-result";
-
+import { ToastProvider } from "../../../providers/toast/toast";
 
 /**
  * Generated class for the HomePage page.
@@ -30,7 +30,7 @@ export class CirHomePage {
   };
 
 
-  constructor(public navCtrl: NavController, public navParams: NavParams,private zbar:ZBar) {
+  constructor(public navCtrl: NavController, public navParams: NavParams,private zbar:ZBar,private  toastProvider: ToastProvider) {
   }
 
   ionViewDidLoad() {
@@ -38,14 +38,16 @@ export class CirHomePage {
   }
 
   public openScan(): void {
-    this.zbar.scan(this.options)
-    .then(result => {
-      this.scanResult=result; // Scanned code
-      this.navCtrl.push(ScanResultPage, { 'scanResult': result });
-    })
-    .catch(error => {
-       this.scanResult=error; // Error message
-    });
+    // this.zbar.scan(this.options)
+    // .then(result => {
+     
+    //   this.navCtrl.push(ScanResultPage, { 'scanResult': result });
+    // })
+    // .catch(error => {
+    //    this.toastProvider.create("扫描结果异常\r\n"+error)
+    // });
+
+    this.navCtrl.push(ScanResultPage, { 'scanResult': "1df9dfjerjldf" });
   }
 
   public checkHistory(): void {
