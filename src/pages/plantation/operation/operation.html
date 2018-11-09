@@ -36,35 +36,68 @@
 
     <ion-title text-center>作业记录</ion-title>
 
-    <ion-row *ngFor="let item of opeInfo.work">
+    <ion-card *ngFor="let item of opeInfo.work" padding>
           <ion-row >
             <ion-col col-4 text-center>
               <p>田间作业编号</p>
             </ion-col>
             <ion-col col-8>
-              <p>{{item.result}}距离策划书达菲鸡是贷款福利局</p>
+              <p>{{item.id}}</p>
             </ion-col>
           </ion-row>
-      <ion-col col-4 text-center>
-        <p>田间作业编号</p>
-        <p>田间作业类型</p>
-        <p>开始日期</p>
-        <p>主要物料</p>
-        <p>作业方式</p>
-        <p>作业效果</p>
-        <p>负责人</p>
-      </ion-col>
-      <ion-col col-8>
-        <p>{{item.id}}</p>
-        <p>{{item.type}}</p>
-        <p>{{item.date}}</p>
-        <p>{{item.material}}</p>
-        <p>{{item.opetype}}</p>
-        <p>{{item.result}}距离策划书达菲鸡是贷款福利局</p>
-        <p>{{item.principal}}</p>
-      </ion-col>
-    </ion-row>
-  </ion-list>
 
+          <ion-row >
+            <ion-col col-4 text-center>
+              <p>田间作业类型</p>
+            </ion-col>
+            <ion-col col-8>
+              <p>{{item.type}}</p>
+            </ion-col>
+          </ion-row>
+
+          <ion-row >
+            <ion-col col-4 text-center>
+              <p>开始日期</p>
+            </ion-col>
+            <ion-col col-8>
+              <p>{{item.date}}</p>
+            </ion-col>
+          </ion-row>
+
+          <ion-row >
+            <ion-col col-4 text-center>
+              <p>主要物料</p>
+            </ion-col>
+            <ion-col col-8>
+              <p>{{item.material}}</p>
+            </ion-col>
+          </ion-row>
+          <ion-row >
+            <ion-col col-4 text-center>
+              <p>作业方式</p>
+            </ion-col>
+            <ion-col col-8>
+              <p>{{item.opetype}}</p>
+            </ion-col>
+          </ion-row>
+          <ion-row >
+            <ion-col col-4 text-center>
+              <p>作业效果</p>
+            </ion-col>
+            <ion-col col-8>
+              <p>{{item.result}}</p>
+            </ion-col>
+          </ion-row>
+          <ion-row >
+            <ion-col col-4 text-center>
+              <p>负责人</p>
+            </ion-col>
+            <ion-col col-8>
+              <p>{{item.principal}}</p>
+            </ion-col>
+          </ion-row>
+          <img class="card-seal" src="assets/imgs/seal.png" >
+          </ion-card>
+  </ion-list>
 
 </ion-content>

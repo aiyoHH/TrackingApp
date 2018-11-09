@@ -38,16 +38,16 @@ export class CirHomePage {
   }
 
   public openScan(): void {
-    // this.zbar.scan(this.options)
-    // .then(result => {
+    this.zbar.scan(this.options)
+    .then(result => {
      
-    //   this.navCtrl.push(ScanResultPage, { 'scanResult': result });
-    // })
-    // .catch(error => {
-    //    this.toastProvider.create("扫描结果异常\r\n"+error)
-    // });
+      this.navCtrl.push(ScanResultPage, { 'scanResult': result });
+    })
+    .catch(error => {
+       this.toastProvider.create("扫描结果异常\r\n"+error).present();
+    });
 
-    this.navCtrl.push(ScanResultPage, { 'scanResult': "1df9dfjerjldf" });
+    // this.navCtrl.push(ScanResultPage, { 'scanResult': "1df9dfjerjldf" });
   }
 
   public checkHistory(): void {

@@ -1,4 +1,5 @@
 //本demo跑起来,你需要克服以下问题:
+--技术方案Angular5+ionic3+cordova+typescript+scss
 --软件开发工具包(JDK,SDK,NodeJs)
 --环境变量配置(Path))
 --开发工具

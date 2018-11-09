@@ -1,6 +1,18 @@
 page-operation {
   $bg-color:#f2f2f2;
  
+  ion-card{
+    position: relative;
+}
+.card-seal {
+  position: absolute;
+  top: 1%;
+  right:1%;
+
+  width: 80px;
+  height: 80px;
+  
+}
   ion-content >ion-row{
     background-color: $bg-color;
   }

@@ -35,7 +35,7 @@ export class ScanResultPage {
         {
           text: '取消',
           handler: () => {
-            confirm.dismiss();
+            // confirm.dismiss();
           }
         },
         {
