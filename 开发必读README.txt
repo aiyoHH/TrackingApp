@@ -60,6 +60,10 @@ ionic cordova plugin add �������
 ---插件名称可以到Cordova官网查找
 ---Cordova官网：https://cordova.apache.org/
 
+//因插件安装卸载，残留缓存清楚指令
+rm -rf node-modules  //s删除
+ionic  build         //重建
+
 
 
 ionic的几个生命周期函数
